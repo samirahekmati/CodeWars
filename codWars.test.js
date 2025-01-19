@@ -1,9 +1,13 @@
 //const { default: test } = require("node:test")
 
-function multiply(num1,num2){
-    return num1*num2
+const { default: test } = require("node:test")
+
+function addUp(num){
+    return num+5
 }
 
-test('multiplies two numbers', () => {
-    expect(multiply(2,2)).toBe(4)
+console.log(addUp(5))
+
+test('add 5 to number', () => {
+    expect(addUp(5)).toBe(10)
 })
