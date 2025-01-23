@@ -1,4 +1,6 @@
-function findAverage(array) {
+const numbers = [2,4,6,8]
+
+function findAveragewithForLoop(array) {
     let average = 0
     let sum = 0
 
@@ -12,5 +14,21 @@ function findAverage(array) {
     return average
   }
 
-//const sum = array.reduce((a,b) => a+b, 0) 0 means when there is zero give me zero
-//return sum/ array.length
+  console.log("solution with for loop -->", findAveragewithForLoop(numbers))
+
+
+
+
+  
+//solution with map method
+
+function findAverageWithReduce (array){
+  if(array.length === 0){
+    return 0
+  }
+
+  const sum = array.reduce((result,element) => result+element , 0)
+  return sum/array.length
+}
+
+console.log("solution with reduce -->", findAverageWithReduce(numbers))
