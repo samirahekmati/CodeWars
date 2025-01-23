@@ -4,6 +4,8 @@
 // 1*2 + 2*2 + 2*2 = 9
 
 function squareSum(numbers) {
+
+    // return numbers.map(n => n*n).reduce((n,b),)
     let totalSum = 0;
     
     for(let i = 0 ; i<numbers.length; i++){
