@@ -19,3 +19,13 @@ function fakeBin(x){
 }
 
 console.log(fakeBin('45385593107843568'))
+
+function fakeBinWithMap(x){
+    const newArr = x.split("")
+    console.log("new array-->",newArr);
+    const map = newArr.map(element => element > 5 ? 1 : 0)
+    return map.join("")
+}
+
+console.log("solution with map",fakeBinWithMap('45385593107843568'))
+
