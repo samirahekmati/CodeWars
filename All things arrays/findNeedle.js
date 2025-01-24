@@ -5,6 +5,9 @@
 // "found the needle at position " plus the index it found the needle, so:
 
 
+
+const haystack =["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]
+//solution with for loop
 function findNeedle(array){
     for(let i = 0; i< array.length; i++){
         if(array[i] === "needle"){
@@ -13,7 +16,24 @@ function findNeedle(array){
     }
 }
 
-console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]))
+console.log("with for loop-->",findNeedle(haystack))
+
+
+//with map
+function findNeedleWithMap(array) {
+    let result ="";
+    array.map((element,index) => {
+        if(element === "needle"){
+            result = `found the needle at position ${index}`
+        }
+    })
+    return result;
+}
+
+console.log("with map-->",findNeedleWithMap(haystack))
+
+
+
 
 
 // function findNeedle(array) {
