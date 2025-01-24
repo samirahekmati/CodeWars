@@ -12,6 +12,13 @@
 
 // Hint: Don't forget to check for bad values like null/undefined
 
+const arrayOfBoolean = [true,  true,  true,  false,
+    true,  true,  true,  true ,
+    true,  false, true,  false,
+    true,  false, false, true ,
+    true,  true,  true,  true ,
+    false, false, true,  true]
+
 function countSheep(array){
     //retrun sheep.filter(Boolean).length
     let sheepCount = 0;
@@ -23,9 +30,12 @@ function countSheep(array){
     return sheepCount
 }
 
-console.log(countSheep([true,  true,  true,  false,
-    true,  true,  true,  true ,
-    true,  false, true,  false,
-    true,  false, false, true ,
-    true,  true,  true,  true ,
-    false, false, true,  true]))
+console.log("sheep count with for loop-->",countSheep(arrayOfBoolean))
+
+
+//solution with filter
+function countSheepWithFilter(array){
+    return array.filter(Boolean).length
+}
+
+console.log("sheep count with filter-->", countSheepWithFilter(arrayOfBoolean))
