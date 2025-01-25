@@ -20,3 +20,12 @@ console.log(
     sentence.includes(word) ? 'is' : 'is not'
   } in the sentence`,
 );
+
+const fruits = ["Apple", "orange","kiwi","grapes"]
+console.log(fruits.includes("Apple")) //true
+console.log(fruits.includes("cucumber")) //false
+console.log(fruits.includes("Apple", 2)) //false
+
+
+const numbers = [2,5,6,9,20]
+console.log(numbers.includes("2")) //true because it is not stricktly checking 2=="2"
