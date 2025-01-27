@@ -1,5 +1,9 @@
 // You must only modify this function, add a new function, and update the last line of the code in the file. You should not change anything between.
 
+function creatGreeting(person){
+    const greeting = `${person.title}. ${person.first_name} ${person.last_name}`
+    return greeting
+}
 
 function createMessage(personOne, personTwo, currentDate) {
     if (!personOne || !personTwo) {
@@ -9,11 +13,8 @@ function createMessage(personOne, personTwo, currentDate) {
     const formattedDate = currentDate.toISOString().split("T")[0];
     let message = `From: Some company\nSent: ${formattedDate}\nSubject: Important notification\n`;
   
-    const greetingOne = `${personOne.title}. ${personOne.first_name} ${personOne.last_name}`;
   
-    const greetingTwo = `${personTwo.title}. ${personTwo.first_name} ${personTwo.last_name}`;
-  
-    message += `Hello ${greetingOne} + ${greetingTwo}\n`;
+    message += `Hello ${creatGreeting(personOne)} + ${creatGreeting(personTwo)}\n`;
   
     if (currentDate.getDay() === 0 || currentDate.getDay() === 6) {
       message += "Sorry to bother you on a weekend.\n"
@@ -41,4 +42,4 @@ function createMessage(personOne, personTwo, currentDate) {
   
   // You must add your new function as a new key in the object below.
   // For instance, if you named your function findLowestNumber, the below line should read: export default {createMessage, findLowestNumber};
-  export default {createMessage};
+  export default {createMessage, creatGreeting};
