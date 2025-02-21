@@ -15,5 +15,6 @@ function removeChar(str){
     return newString
 
 }
+//retrun str.slice(1, -1)
 
 console.log(removeChar("HLilacH"))
