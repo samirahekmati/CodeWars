@@ -28,4 +28,10 @@ function findOdd(A) {
 
   }
 
+  //Optimized Code with Bitwise XOR
+
+  function findOdd(A) {
+    return A.reduce((acc, num) => acc ^ num, 0);
+}
+
   console.log(findOdd([0,1,0,1,0]))
