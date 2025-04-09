@@ -10,16 +10,10 @@
 // "ABBA" -> 2 # 'A' and 'B' each occur twice
 
 function duplicateCount(string){
-    const newArr = string.split("")
-    console.log(newArr);
-    let count = 0;
-    let char 
-    for(let i = 0; i < newArr.length; i++ ){
-        if(newArr[i]== char){
-            count++
-        }
-    }
-    return count
+    const newArr = string.toLowerCase().split("")
+    const filteredArr =  newArr.filter((item, index) => newArr.indexOf(item) !== index);
+    
+    
 }
 
-console.log(duplicateCount("Lilac is playing"))
+console.log(duplicateCount("Indivisibilities"))
