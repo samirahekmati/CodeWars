@@ -28,10 +28,21 @@ function findOdd(A) {
 
   }
 
+  console.log(findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1]))
+
+
+
+
+  
   //Optimized Code with Bitwise XOR
+
+  //.reduce() method is used to apply the XOR (^) operation across all elements in the array.
+  
+
+
 
   function findOdd(A) {
     return A.reduce((acc, num) => acc ^ num, 0);
 }
 
-  console.log(findOdd([0,1,0,1,0]))
+  //console.log(findOdd([0,1,0,1,0]))
