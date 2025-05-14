@@ -20,3 +20,16 @@ function isSquare(n){
 
 console.log("is 25 squre-->", isSquare(25))
 console.log("is 99 squre-->", isSquare(99))
+
+function isSquare2(n){
+    if( (n < 0) || typeof n !== "number" ){
+        return false
+    }
+
+    const roundSqrt = Math.round(Math.sqrt(n))
+
+    return roundSqrt **2 === n
+}
+
+console.log("is 25 squre two-->", isSquare2(25))
+console.log("is 99 squre two-->", isSquare2(99))
