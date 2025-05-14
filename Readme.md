@@ -37,3 +37,11 @@ Math.min(...array)
 
 # **Removing str spaces:**
 str.replace(/ /g, '')
+
+# replace method in string
+**how to remove all vowels in a sentence or string**
+str.raplca(/a|i|o|u|e/gi, "")
+or
+```javascript
+text.replace(/[aioue]/gi, "")
+```
