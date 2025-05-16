@@ -12,3 +12,11 @@ function openOrSenior(data) {
 }
 
 console.log(openOrSenior([[44,3],[56, 8]]))
+
+// second solution with map
+
+function openOrSenior2(data){
+    return data.map(([age, handicap]) => age >= 55 && handicap > 7 ? 'Senior' : 'Open')
+}
+
+console.log(openOrSenior2([[44,3],[56, 8]]))
